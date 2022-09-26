@@ -6,10 +6,10 @@ import "swiper/css/free-mode";
 import { BreedButton } from "./Button.js";
 import Card from "react-bootstrap/Card";
 
-export const Breed = ({ petlist }) => {
+export const Adopt = ({ petlist }) => {
   return (
     <Swiper
-      spaceBetween={10}
+      spaceBetween={300}
       slidesPerView={1}
       // freeMode={true}
       loop={true}
@@ -26,7 +26,7 @@ export const Breed = ({ petlist }) => {
           <Card
             style={{
               backgroundColor: "#FFC300",
-              height: "400px",
+              height: "320px",
               width: "300px",
               border: "2px solid #FFC300",
               borderRadius: "20px",
@@ -43,9 +43,7 @@ export const Breed = ({ petlist }) => {
             <h3>
               {each.name}, {each.age}
             </h3>
-            <h6>{each.species}</h6>
-            <p>Owned by:{each.owner}</p>
-            <BreedButton className="align-self-end mt-auto" text="View"/>
+            <BreedButton className="align-self-end mt-auto" text="Adopt"/>
             </Card.Body>
           </Card>
         </SwiperSlide>

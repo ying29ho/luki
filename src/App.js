@@ -1,6 +1,7 @@
 import "./App.css";
 import { Breed } from "../src/components/Breed.js";
 import { Sitters } from "../src/components/Sitters.js";
+import { Adopt } from "../src/components/Adopt.js";
 import Container from "react-bootstrap/esm/Container";
 import Abbey from "../src/sitters/Abbey.jpeg";
 import Bash from "../src/sitters/Bash.jpeg";
@@ -43,7 +44,7 @@ const pets = [
     id: 3,
     name: "Ethanol",
     age: "10",
-    species: "mixed English Mastiff and Tibetan Mastiff ",
+    species: "mixed English Mastiff & Tibetan Mastiff ",
     owner: "Frankie",
     img: EnglishmixTibetanMastiff,
   },
@@ -151,19 +152,19 @@ function App() {
     <div className="App">
       <Container align="left">
         
-      <div className="m-5">
+      <div className="p-5">
         <h1>Adopt these wonderful lil beings here!</h1>
-        <Breed petlist={pets} />
+        <Adopt petlist={pets} />
       </div>
-      <div>
+      <div className="p-5">
         <h1>
           Looking for a mate for your pet? Here's our list of eligible bachelors
           and bachelorettes.
         </h1>
         <Breed petlist={pets} />
       </div>
-      <div>
-        <h1>Looking for pet sitters? Here's the top pick the month.</h1>
+      <div className="p-5">
+        <h1>Looking for pet sitters? Here's the top pick of the month.</h1>
         <Sitters sitterlist={sitters} />
       </div>
       </Container>
