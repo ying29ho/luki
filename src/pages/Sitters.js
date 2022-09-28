@@ -1,13 +1,13 @@
 import Layout from "../Layout";
 
-const Login =()=>{
+const Sitters =()=>{
     return(
         <Layout>
             <div>
-                <h1>Login</h1>
+                <h1>Sitters</h1>
             </div>
         </Layout>
     )
 }
 
-export default Login;
+export default Sitters;

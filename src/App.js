@@ -1,8 +1,9 @@
 import "./App.css";
-import { Breed } from "../src/components/Breed.js";
-import { Sitters } from "../src/components/Sitters.js";
-import { Adopt } from "../src/components/Adopt.js";
+import { DesktopBreed, MobileBreed } from "../src/components/Breed.js";
+import { DesktopSitters, MobileSitters } from "../src/components/Sitters.js";
+import { DesktopAdopt, MobileAdopt } from "../src/components/Adopt.js";
 import Container from "react-bootstrap/esm/Container";
+import MediaQuery from "react-responsive";
 import Abbey from "../src/sitters/Abbey.jpeg";
 import Bash from "../src/sitters/Bash.jpeg";
 import Christine from "../src/sitters/Christine.jpeg";
@@ -31,7 +32,14 @@ import Pomeranian from "../src/breeds/Pomeranian.jpeg";
 import GoldenRetriever from "../src/breeds/GoldenRetriever.jpeg";
 
 const pets = [
-  { id: 1, name: "Abba", age: "15", species: "pure Chihuahua", owner: "Bobby", img: Chihuahua,},
+  {
+    id: 1,
+    name: "Abba",
+    age: "15",
+    species: "pure Chihuahua",
+    owner: "Bobby",
+    img: Chihuahua,
+  },
   {
     id: 2,
     name: "Cathy",
@@ -56,15 +64,29 @@ const pets = [
     owner: "Hellen",
     img: Pomeranian,
   },
-  { id: 5, name: "Ingrid", age: "8", species: "pure Beagle", owner: "Joel", img: Beagle },
-  { id: 6, name: "Kapn", age: "6", species: "pure Dachshund", owner: "Lemon", img: Dachshund },
+  {
+    id: 5,
+    name: "Ingrid",
+    age: "8",
+    species: "pure Beagle",
+    owner: "Joel",
+    img: Beagle,
+  },
+  {
+    id: 6,
+    name: "Kapn",
+    age: "6",
+    species: "pure Dachshund",
+    owner: "Lemon",
+    img: Dachshund,
+  },
   {
     id: 7,
     name: "Milo",
     age: "4",
     species: "pure German Shepard",
     owner: "Nico",
-    img: GermanShepard
+    img: GermanShepard,
   },
   {
     id: 8,
@@ -72,7 +94,7 @@ const pets = [
     age: "2",
     species: "pure Golden Retriever",
     owner: "Precious",
-    img: GoldenRetriever
+    img: GoldenRetriever,
   },
   {
     id: 9,
@@ -80,7 +102,7 @@ const pets = [
     age: "10",
     species: "pure Chow Chow",
     owner: "Randal",
-    img: ChowChow
+    img: ChowChow,
   },
   {
     id: 10,
@@ -88,85 +110,181 @@ const pets = [
     age: "12",
     species: "pure Dobermann",
     owner: "Toms",
-    img: Dobermann
+    img: Dobermann,
   },
-  { id: 11, name: "Lalu", age: "4", species: "pure Dalmation", owner: "Umma", img: Dalmatian },
+  {
+    id: 11,
+    name: "Lalu",
+    age: "4",
+    species: "pure Dalmation",
+    owner: "Umma",
+    img: Dalmatian,
+  },
   {
     id: 12,
     name: "Dolly",
     age: "4",
     species: "pure Dalmation",
     owner: "Umma",
-    img: Dalmatian1
+    img: Dalmatian1,
   },
 ];
 
-const sitters=[
+const sitters = [
   {
-    id: 1, name: "Abbey", location: "North", ratings: 5, img: Abbey, 
+    id: 1,
+    name: "Abbey",
+    location: 4,
+    ratings: 3,
+    img: Abbey,
+    rate: 10,
   },
   {
-    id: 2, name: "Christine", location: "North", ratings: 5,  img: Christine, 
+    id: 2,
+    name: "Christine",
+    location: 1,
+    ratings: 5,
+    img: Christine,
+    rate: 10,
   },
   {
-    id: 3, name: "Elizabeth", location: "North", ratings: 5,img: Elizabeth,  
+    id: 3,
+    name: "Elizabeth",
+    location: 54,
+    ratings: 1,
+    img: Elizabeth,
+    rate: 10,
   },
   {
-    id: 4, name: "Fred", location: "North", ratings: 5 , img: Fred, 
+    id: 4,
+    name: "Fred",
+    location: 13,
+    ratings: 5,
+    img: Fred,
+    rate: 10,
   },
   {
-    id: 5, name: "Fedrick", location: "North", ratings: 5 , img: Fredrick, 
+    id: 5,
+    name: "Fedrick",
+    location: 92,
+    ratings: 4,
+    img: Fredrick,
+    rate: 10,
   },
   {
-    id: 6, name: "John", location: "North", ratings: 5 , img: John, 
+    id: 6,
+    name: "John",
+    location: 340,
+    ratings: 3,
+    img: John,
+    rate: 10,
   },
   {
-    id: 7, name: "Lily", location: "North", ratings: 5 , img: Lily, 
+    id: 7,
+    name: "Lily",
+    location: 9,
+    ratings: 2.5,
+    img: Lily,
+    rate: 10,
   },
   {
-    id: 8, name: "Mark", location: "North", ratings: 5 , img: Mark, 
+    id: 8,
+    name: "Mark",
+    location: 63,
+    ratings: 5,
+    img: Mark,
+    rate: 10,
   },
   {
-    id: 9, name: "Molly", location: "North", ratings: 5 , img: Molly, 
+    id: 9,
+    name: "Molly",
+    location: 78,
+    ratings: 5,
+    img: Molly,
+    rate: 10,
   },
   {
-    id: 10, name: "Nicky", location: "North", ratings: 5 , img: Nicky, 
+    id: 10,
+    name: "Nicky",
+    location: 7,
+    ratings: 4.5,
+    img: Nicky,
+    rate: 10,
   },
   {
-    id: 11, name: "Rose", location: "North", ratings: 5 , img: Rose, 
+    id: 11,
+    name: "Rose",
+    location: 11,
+    ratings: 3,
+    img: Rose,
+    rate: 10,
   },
   {
-    id: 12, name: "Taylor", location: "North", ratings: 5 , img: Taylor, 
+    id: 12,
+    name: "Taylor",
+    location: 29,
+    ratings: 3.5,
+    img: Taylor,
+    rate: 10,
   },
   {
-    id: 13, name: "Tom", location: "North", ratings: 5 , img: Tom, 
+    id: 13,
+    name: "Tom",
+    location: 132,
+    ratings: 5,
+    img: Tom,
+    rate: 10,
   },
   {
-    id: 14, name: "Bash", location: "North", ratings: 5 , img: Bash, 
+    id: 14,
+    name: "Bash",
+    location: 120,
+    ratings: 1.5,
+    img: Bash,
+    rate: 10,
   },
-  
-]
+];
 
 function App() {
   return (
     <div className="App">
       <Container align="left">
+        <MediaQuery maxWidth={900}>
+          <div className="p-4">
+            <h1>Adopt these wonderful lil beings here!</h1>
+            <MobileAdopt petlist={pets} />
+          </div>
+          <div className="p-4">
+          <h1>
+            Looking for a mate for your pet? Here's our list of eligible
+            bachelors and bachelorettes.
+          </h1>
+          <MobileBreed petlist={pets} />
+        </div>
+        <div className="p-4">
+          <h1>Looking for pet sitters? Here's the top pick of the month.</h1>
+          <MobileSitters sitterlist={sitters} />
+        </div>
+        </MediaQuery>
+        <MediaQuery minWidth={901}>
+          <div className="p-5">
+            <h1>Adopt these wonderful lil beings here!</h1>
+            <DesktopAdopt petlist={pets} />
+          </div>
+          <div className="p-5">
+          <h1>
+            Looking for a mate for your pet? Here's our list of eligible
+            bachelors and bachelorettes.
+          </h1>
+          <DesktopBreed petlist={pets} />
+        </div>
+        <div className="p-5">
+          <h1>Looking for pet sitters? Here's the top pick of the month.</h1>
+          <DesktopSitters sitterlist={sitters} />
+        </div>
+        </MediaQuery>
+       
         
-      <div className="p-5">
-        <h1>Adopt these wonderful lil beings here!</h1>
-        <Adopt petlist={pets} />
-      </div>
-      <div className="p-5">
-        <h1>
-          Looking for a mate for your pet? Here's our list of eligible bachelors
-          and bachelorettes.
-        </h1>
-        <Breed petlist={pets} />
-      </div>
-      <div className="p-5">
-        <h1>Looking for pet sitters? Here's the top pick of the month.</h1>
-        <Sitters sitterlist={sitters} />
-      </div>
       </Container>
     </div>
   );
