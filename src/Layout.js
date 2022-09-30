@@ -1,17 +1,17 @@
-import { DesktopNavbar, MobileNavbar } from "../src/components/Navbar";
+import { DesktopNavbar, MobileNavbar, NewNav } from "../src/components/Navbar";
 import App from "./App";
 import MediaQuery from "react-responsive";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <MediaQuery maxWidth={900}>
+      {/* <MediaQuery maxWidth={900}>
         <MobileNavbar />
       </MediaQuery>
       <MediaQuery minWidth={901}>
         <DesktopNavbar />
-      </MediaQuery>
-
+      </MediaQuery> */}
+<NewNav/>
       <div>{children}</div>
       {/* <Footer/>÷\ */}
     </div>
