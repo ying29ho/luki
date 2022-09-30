@@ -113,7 +113,6 @@ export const MobileBreedCard = ({ each }) => {
             Go to Breed
           </Button>
         </div>
-      \
       </Card.Body>
     </Card>
   );
