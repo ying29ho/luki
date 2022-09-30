@@ -237,7 +237,6 @@ export const MobileSitterCard = ({ each }) => {  const navigate = useNavigate();
           isHalf={false}
           activeColor="#FF4400"
         />
-        <p>{each.ratings}</p>
         <div className="d-grid" align="center">
           <Button onClick={navigateAdopt} className="align-self-end mt-auto">
             Go to Sitter

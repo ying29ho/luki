@@ -25,106 +25,82 @@ import GermanShepard from "../src/breeds/GermanShepard.jpeg";
 import Pomeranian from "../src/breeds/Pomeranian.jpeg";
 import GoldenRetriever from "../src/breeds/GoldenRetriever.jpeg";
 
-export const AdoptData=[
-    {
-        id: 1,
-        name: "Abba",
-        age: "15",
-        species: "pure Chihuahua",
-        owner: "Bobby",
-        img: Chihuahua,
-      },
-      {
-        id: 2,
-        name: "Cathy",
-        age: "9",
-        species: "pure French Bull Dog",
-        owner: "Dobby",
-        img: FrenchBullDog,
-      },
-      {
-        id: 3,
-        name: "Ethanol",
-        age: "10",
-        species: "mixed English Mastiff & Tibetan Mastiff ",
-        owner: "Frankie",
-        img: EnglishmixTibetanMastiff,
-      },
-      {
-        id: 4,
-        name: "Georgy",
-        age: "9",
-        species: "pure Pomeranian",
-        owner: "Hellen",
-        img: Pomeranian,
-      },
-      {
-        id: 5,
-        name: "Ingrid",
-        age: "8",
-        species: "pure Beagle",
-        owner: "Joel",
-        img: Beagle,
-      },
-      {
-        id: 6,
-        name: "Kapn",
-        age: "6",
-        species: "pure Dachshund",
-        owner: "Lemon",
-        img: Dachshund,
-      },
-      {
-        id: 7,
-        name: "Milo",
-        age: "4",
-        species: "pure German Shepard",
-        owner: "Nico",
-        img: GermanShepard,
-      },
-      {
-        id: 8,
-        name: "Opal",
-        age: "2",
-        species: "pure Golden Retriever",
-        owner: "Precious",
-        img: GoldenRetriever,
-      },
-      {
-        id: 9,
-        name: "Queen Lizzy",
-        age: "10",
-        species: "pure Chow Chow",
-        owner: "Randal",
-        img: ChowChow,
-      },
-      {
-        id: 10,
-        name: "Sandi",
-        age: "12",
-        species: "pure Dobermann",
-        owner: "Toms",
-        img: Dobermann,
-      },
-      {
-        id: 11,
-        name: "Lalu",
-        age: "4",
-        species: "pure Dalmation",
-        owner: "Umma",
-        img: Dalmatian,
-      },
-      {
-        id: 12,
-        name: "Dolly",
-        age: "4",
-        species: "pure Dalmation",
-        owner: "Umma",
-        img: Dalmatian1,
-      },
+export const AdoptData = [
+  {
+    id: 1,
+    name: "Abba",
+    age: "15",
+    img: Chihuahua,
+  },
+  {
+    id: 2,
+    name: "Cathy",
+    age: "9",
+    img: FrenchBullDog,
+  },
+  {
+    id: 3,
+    name: "Ethanol",
+    age: "10",
+    img: EnglishmixTibetanMastiff,
+  },
+  {
+    id: 4,
+    name: "Georgy",
+    age: "9",
+    img: Pomeranian,
+  },
+  {
+    id: 5,
+    name: "Ingrid",
+    age: "8",
+    img: Beagle,
+  },
+  {
+    id: 6,
+    name: "Kapn",
+    age: "6",
+    img: Dachshund,
+  },
+  {
+    id: 7,
+    name: "Milo",
+    age: "4",
+    img: GermanShepard,
+  },
+  {
+    id: 8,
+    name: "Opal",
+    age: "2",
+    img: GoldenRetriever,
+  },
+  {
+    id: 9,
+    name: "Queen Lizzy",
+    age: "10",
+    img: ChowChow,
+  },
+  {
+    id: 10,
+    name: "Sandi",
+    age: "12",
+    img: Dobermann,
+  },
+  {
+    id: 11,
+    name: "Lalu",
+    age: "4",
+    img: Dalmatian,
+  },
+  {
+    id: 12,
+    name: "Dolly",
+    age: "4",
+    img: Dalmatian1,
+  },
 ];
 
-export const BreedData=[
+export const BreedData = [
   {
     id: 1,
     name: "Georgy",
@@ -197,10 +173,9 @@ export const BreedData=[
     owner: "Hellen",
     img: Pomeranian,
   },
-
 ];
 
-export const SitterData=[
+export const SitterData = [
   {
     id: 1,
     name: "Abbey",
@@ -313,4 +288,4 @@ export const SitterData=[
     img: Bash,
     rate: 10,
   },
-]
+];
